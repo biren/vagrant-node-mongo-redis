@@ -7,14 +7,12 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "vagrantnodemongo64"
-
-  # The url from where the 'config.vm.box' box will be fetched if it
-  # doesn't already exist on the user's system.
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box = "vagrant-node-mongo-redis-64"
+  config.vm.box_url = "vagrant-node-mongo-redis-64.box"
   config.vm.hostname = "node-mongo-redis-vm"
   # config.vm.provision :shell, :inline => $script
-  config.vm.provision :shell, :path => "bootstrap.sh"
+  # # Uncomment following line if you have a need to run bootstrap.sh
+  # config.vm.provision :shell, :path => "bootstrap.sh"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
